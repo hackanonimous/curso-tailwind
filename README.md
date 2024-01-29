@@ -8,9 +8,15 @@ el siguiente repositorio es un curso  del framework de css tailwindcss donde voy
 
 **Indice**
 
-* [1. Instalacion](#1. Instalacion)
+* [1. Instalacion](#1-instalacion)
 
-* [2. Color y Tamaño](#2. Color y Tamaño)
+* [2. Color y Tamaño](#2-color-y-tamaño)
+  
+  * [Color](#color)
+    
+    * [Uso de Colores Personalizados](#uso-de-colores-personalizados)
+  
+  * [Tamaño](#tamaño)
 
 ## 1. Instalacion
 
