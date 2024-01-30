@@ -54,7 +54,6 @@ export default {
         "./src/**/*.{js,ts,jsx,tsx}",
     ],    
 }
-
 ```
 
 ---
@@ -102,7 +101,7 @@ como podemos notar tenemos un elemento `<div>` que le establecemos un color de f
 
 #### Uso de colores personalizados
 
-podemos personalizar los colores que usaremos en nuestro proyecto y no depender de los que trae por defecto tailwind para eso tenemposque configurar nuestro archivo `tailwind.config.js` en el objeto `theme.colors` especificaremos nuestros colres personalizados en mi caso personalizare algunos colores de la siguiente manera
+podemos personalizar los colores que usaremos en nuestro proyecto y no depender de los que trae por defecto tailwind para eso tenemos que configurar nuestro archivo `tailwind.config.js` en el objeto `theme.colors` especificaremos nuestros colores personalizados en mi caso personalizare algunos colores de la siguiente manera
 
 ```js
 theme:{
@@ -125,7 +124,7 @@ return(
 )
 ```
 
-**Observacion:** una vez configurado nuestro colores no podremos hacer uso de los colores por defecto de tailwind
+**Observacion:** una vez configurado nuestro colores no podremos hacer uso de los colores por defecto de tailwind si queremos solo extender el uso de colores perosnalizados y tener ambos tanto los de tailwind como los personalizados tendremos que pasar el objeto `colors` al objeto `extend` asi podremos tener los que bienes por defecto y los que hemos personalizado.
 
 **Recomendacion:** de la documentacion se recomienda usar el nombre de colores de manera literal (ejm: rojo, amarillo,verde) en una escala numerica (donde 50 es claro y 950 el mas oscuro) de forma predeterminada en lugar de usar `primary`, `secondary` o `danger` 
 
@@ -153,4 +152,14 @@ theme:{
 }
 ```
 
-### Tamaño
+### Tamaños (width, height)
+
+utilidades para definir el ancho com el alto de un elemento 
+
+1. Ancho y Alto Fijo - Para establecer un ancho y alto fijo a nuestro elemento usaremos `w-{numero}` o `w-px`, `h-{numero}` o `w-px`, para definir un ancho y alto debemos tener en consideracion la siguiente relacion `w-n` sera igual a `n*4px` el numero `n` sera el producto de `n*4` en pixeles esta relacion tambien se aplica al alto, el ancho y alto fijo solo se establecen en numeros pares iniciando en `0 hasta 384`.
+
+2. Ancho y Alto por Porcentaje - En este caso el elemento ocupara el porcentaje que le asignemos en relacion de su elemento padre y lo usaremos de la siguiente manera `w-{fraccion}` o `w-full`, `h-{fraccion}` o `w-full`, este ultimo ocupara el 100% de su elemento padre.
+   ejm: si queremos que un elmento ocupe la mitad de su elemento padre
+   `<div className="w-1/2 h-1/2"></div>`,
+   `<div className="w-2/5 h-2/5"></div>`, esto ocupara las 2 partes de un 5
+   `<div className="w-2/3 h-2/3"></div>`, ocupara las dos partes de un 3
